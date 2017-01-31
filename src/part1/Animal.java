@@ -1,3 +1,6 @@
+package part1;
+
+import strategyPattern.FlyAbility;
 import sun.rmi.runtime.Log;
 
 /**
@@ -8,6 +11,7 @@ public class Animal {
     private double height;
     private double weight;
     private String sound;
+    private FlyAbility flyAbility;
 
     public void setName(String newName) { name = newName; }
     public String getName() { return this.name; }
@@ -26,5 +30,17 @@ public class Animal {
 
     public void setSound(String newSound) { sound = newSound; }
     public String getSound() { return sound; }
+
+    public void setFlyAbility(FlyAbility flyAbility) {
+        this.flyAbility = flyAbility;
+    }
+
+    public FlyAbility getFlyAbility() {
+        return this.flyAbility;
+    }
+
+    public void tryToFly() {
+        flyAbility.tryToFly();
+    }
 
 }
