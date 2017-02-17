@@ -21,8 +21,7 @@ public abstract class EntertainmentDevice {
 
     public void deviceFeedback() {
         if (deviceState > maxSetting || deviceState < 0) { deviceState = 0; }
-
-        System.out.println("On " + deviceState);
+        System.out.println("deviceState On " + deviceState);
     }
 
 }
